@@ -1,0 +1,8 @@
+{
+  "name": "projetoTurmaTI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "de8f23b7"
+}
