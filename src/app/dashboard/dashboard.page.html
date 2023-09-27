@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div>
+  <label for="pokemonId">Enter Pokémon ID:</label>
+  <input type="number" id="pokemonId" [(ngModel)]="pokemonId">
+  
+  <button (click)="getPokemon()">Fetch Pokémon</button>
+  
+  <div *ngIf="pokemon">
+    <h2>{{pokemon.name | uppercase}}</h2>
+    <img [src]="pokemon.sprites.front_default" alt="{{pokemon.name}}">
+    <p>Height: {{pokemon.height}}</p>
+    <p>Weight: {{pokemon.weight}}</p>
+  </div>
+</div>
+
+  
+</ion-content>

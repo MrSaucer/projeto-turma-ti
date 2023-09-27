@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form (ngSubmit)="redirectToLoader()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+      </div>
+
+      <ion-button type="submit">Login</ion-button>
+    </form>
+  </div>
+</ion-content>
