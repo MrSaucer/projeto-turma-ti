@@ -15,8 +15,9 @@ export class LoginPage {
 
   redirectToLoader() {
     if (this.user && this.password) {
-      this.authService.loginUser(this.user, this.password).subscribe(data => {
-        if (data.success) {
+      this.authService.loginUser().subscribe(data => {
+        const user = data.find((u: any) => u.user === this.user && u.password === this.password);
+        if (user) {
           this.router.navigate(['/loader']);
           setTimeout(() => {
             this.router.navigate(['/dashboard']);
