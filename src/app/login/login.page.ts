@@ -13,7 +13,7 @@ export class LoginPage {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  redirectToLoader() {
+  LoginAuth() {
     if (this.user && this.password) {
       this.authService.loginUser().subscribe(data => {
         const user = data.find((u: any) => u.user === this.user && u.password === this.password);
